@@ -1,1 +1,109 @@
 @charset "UTF-8";
+
+/*Configurações gerais de estilo*/
+*{
+    box-sizing: border-box;/*Definindo altura e largura totais do elemento*/
+}
+/*Configurações da tag body*/
+body {
+    margin: 0;/*Removendo a margem*/
+    font-family: Arial, Helvetica, sans-serif; /*Definindo a fonte dos elementos*/
+}
+
+/*Configurações da class todo*/
+.todo {
+    max-width: 800px; /*Definindo a largura máxima do elemento*/
+    margin: auto; /*Centralizando horizontalmente um elemento pelas margens*/
+    padding: 20px; /*Definindo distância dos elementos para borda*/
+}
+
+/*Configurações da class todo todoTitulo*/
+.todoTitulo {
+    text-align: center; /*Alinhando texto ao centro*/
+}
+/*Configurações da class todoAreaDeBusca*/
+.todoAreaDeBusca{
+    border: 1px solid #000;/*Criando borda*/
+    display: flex; /*Tornando o container flexivel*/
+    height: 40px; /*Definindo altura*/
+    border-radius: 20px; /*Arredondando as bordas do elemento*/
+    overflow: hidden; /*Esconder elemento quando for grande para caber nárea*/
+    margin-bottom: 30px; /*Definindo a distância para margin inferior*/
+}
+/*Configurações da class todoIconeDeBusca*/
+.todoIconeDeBusca {
+    width: 40px;/*Definindo Altura*/
+    line-height: 40px; /*Altura de cada linha*/
+    text-align: center;
+    cursor: pointer; /*Modifica o cursor do mouse para pointer*/
+    font-size: 25px; /*Definndo tamanho da fonte*/
+    border-right: 1 px solid #00000062; /*criando borda a direita*/
+}
+
+/*Configurações da class todoIconeDeBusca quando passa o mouse*/
+.todoIconeDeBusca:hover {
+    background-color: #EEE;
+}
+
+/*Configurações da class todoInputDeBusca*/
+.todoInputDeBusca{
+    flex: 1; /*Defininfo como o elemento será posicionado sem espaço disponivel*/
+    outline: 0; /*Definindo o contorno do elemento*/
+    border: 0;
+    font-size: 16px;
+    padding: 5px;
+}
+/*Configurações da class todoInputDeBusca place holder*/
+.todoInputDeBusca ::placeholder {
+    color:#444;
+}
+/*Configurações da class itensDaLista*/
+.itensDaLista{
+    border: 1px solid #00000062;
+    line-height: 35px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+/*Configurações da class listaDeChecagem*/
+.listadeChecagem .check{
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    color: #EEE;
+    margin: 0 10px;
+    border:  1 px solid #AAA;
+    border-radius: 4px;
+    font-weight: bolder; /*Definindo a fonte para negrito*/
+    display: flex;
+    justify-content: center;/*Definindo espaços entre e ao redor dos itens ao centro*/
+    align-items: center; /*Alinhando itens ao centro*/
+    background-color: #EEE;
+    cursor: pointer;
+    user-select: none; /*Usuário não pode seleccionar o teto*/
+    -webkit-user-select: none;/*Chrome e Safari*/
+    -moz-user-select: none; /*Firefox*/
+    -ms-user-select: none;/*Edge*/
+}
+
+.listadeChecagem .check{
+    color: #CCC;
+    background-color: #CCC;
+}
+.listadeChecagem .input {
+    display: none;
+}
+
+/*Configurações da class listaDeChecagem Checado*/
+.listadeChecagem .input:checked ~.check{
+    color: #FFF;
+    background-color: #2196F3;
+}
+
+
+
+
+
+
+

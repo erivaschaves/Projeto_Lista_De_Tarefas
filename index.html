@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
-    <link rel="stylesheet" href="/Css/style.css">
+    <link rel="stylesheet" href="Css/style.css">
 </head>
 <body>
-    <!--Criando mmodelo e removendo da tela-->
+    <!--Criando modelo e removendo da tela-->
     <div class="modelos" style="display: none;">
         <!--Craindo lista de itens-->
         <li class="itensDaLista">
@@ -23,9 +23,11 @@
     </div>
     <div class="todo">
         <h1 class="todoTitulo">Lista de Tarefas</h1>
-        <div class="todoIconeDeBusca">+</div>
-        <input class="todoInputDeBusca" type="text" name="tarefa">
-        <!--Lista desordenada-->
+        <div class="todoAreaDeBusca">
+            <div class="todoIconeDeBusca">+</div>
+            <input class="todoInputDeBusca" placeholder="Digite nova uma tarefa" type="text" name="tarefa">
+        </div>
+        <!--Lista não ordenada-->
         <ul class="todaLista">
         
         </ul>       
