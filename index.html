@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="/Css/style.css">
+</head>
+<body>
+    <!--Criando mmodelo e removendo da tela-->
+    <div class="modelos" style="display: none;">
+        <!--Craindo lista de itens-->
+        <li class="itensDaLista">
+            <!--Itens Checados-->
+            <label class="listaDeChecagem">
+                <!--Criando botão de checagem-->
+                <input class="input" type="checkbox" name="feito">
+                <div class="check">&#10003;</div>
+            </label>
+            <!--Destacando o texto-->
+            <span class="textoDaLista">exemplo</span>
+        </li>
+    </div>
+    <div class="todo">
+        <h1 class="todoTitulo">Lista de Tarefas</h1>
+        <div class="todoIconeDeBusca">+</div>
+        <input class="todoInputDeBusca" type="text" name="tarefa">
+        <!--Lista desordenada-->
+        <ul class="todaLista">
+        
+        </ul>       
+    </div>
+    <!--Java script Da Página-->
+    <script src="Js/script.js"></script>
+    
+    
+</body>
+</html>
