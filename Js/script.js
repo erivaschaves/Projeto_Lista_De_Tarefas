@@ -1,8 +1,8 @@
-//Variáveis ​​definidas com constnão podem ser redeclaradas
+//Variáveis ​​definidas com const não podem ser redeclaradas.
 
-//Variáveis ​​definidas com constnão podem ser reatribuídas
+//Variáveis ​​definidas com const não podem ser reatribuídas.
 
-//Variáveis ​​definidas com constescopo de bloco
+//Variáveis ​​definidas com const tem escopo de bloco.
 
 const cloneDeModeloDeTarefa = () =>{
     const modeloDeTarefa = window.document.querySelector ('.moledo .listaDeItens')
