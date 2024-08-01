@@ -8,30 +8,51 @@
 
 const cloneDeModeloDeTarefa = () =>{
     //criando modelo de tarefa.
-    const modeloDeTarefa = window.document.querySelector ('.modelos .listaDeItens')
+    const modeloDeTarefa = window.document.querySelector ('.modelos .itensDaLista')
     //clonando modelo de tarefa com função clone node.
-    const cloneDeModeloDeTarefa = modeloDeTarefa.cloneNode(true)
+    const cloneDeModelo = modeloDeTarefa.cloneNode(true)
     //retornando modelo de tarefa.
-    return cloneDeModeloDeTarefa
+    return cloneDeModelo
 }
 //inserindo conteudo
-const inserirConteudo = (tarefa, valor)=>{
+const inserirConteudo = (tarefa, value)=>{
     const textoDaTarefa = tarefa.querySelector('.textoDaLista')
-    textoDaTarefa.textContent = valor
-
+    textoDaTarefa.textContent = value
 }
 //exibir tarefa
 const colocarTarefaNatela = () => {
     const input = window.document.querySelector('todoInputDeBusca')
     //removendo espaços nas extremidades com a função trim()
-    const valor = input.value.trim()
+    const value = input.value.trim()
     //caso o valor não seja vazio
-    if (valor!== ''){
+    if (value!== ''){
         const tarefa = cloneDeModeloDeTarefa()
-        inserirConteudo(tarefa, valor)
+        inserirConteudo(tarefa, value)
+        // criando um novo item e adicionando ao final com appendChild
         window.document.querySelector('todaLista').appendChild(tarefa)
-        input.value = '';
+        input.value = ''
         adicionarTarefaFeita()
     }
-
 }
+// Configurando tarefa concluída
+const tarefaFeita = (item) => {
+    const input = item.querySelector('.input')
+    const text = item.querySelector('textoDaLista')
+    input.addEventListener('change', (event) => {
+        // inserindo linha em tarefa concluída com operador ternário
+        text.style.textDecoration = event.target.checked ? 'line-through' : 'none'})  
+}
+// Adicionando tarefa feita
+const adicionarTarefaFeita = () => {
+    window.document.querySelectorAll('.itensDaLista').forEach(item =>tarefaFeita(item))
+}
+
+window.document.querySelector('.todoInputdeBusca').addEventListener('keyup', (event) => {
+    if (event.code === 'Enter') colocarTarefaNatela()
+})
+
+window.document.querySelector('todoIconeDeBusca').addEventListener ('click', colocarTarefaNatela)
+
+
+
+
