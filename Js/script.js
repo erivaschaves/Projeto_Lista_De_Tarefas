@@ -47,11 +47,21 @@ const adicionarTarefaFeita = () => {
     window.document.querySelectorAll('.itensDaLista').forEach(item =>tarefaFeita(item))
 }
 
-window.document.querySelector('.todoInputdeBusca').addEventListener('keyup', (event) => {
+window.document.querySelector('.todoInputDeBusca').addEventListener('keyup', (event) => {
     if (event.code === 'Enter') colocarTarefaNatela()
 })
 
-window.document.querySelector('todoIconeDeBusca').addEventListener ('click', colocarTarefaNatela)
+window.document.querySelector('.todoIconeDeBusca').addEventListener ('click', colocarTarefaNatela())
+
+/*
+function teste () {
+    window.document.querySelector('.demo').innerHTML = "Olá Mundo";
+}
+
+var elemento = window.document.querySelector('.todoIconeDeBusca');
+elemento.addEventListener('click',teste);*/
+
+
 
 
 

@@ -17,6 +17,7 @@ body {
     padding: 20px; /*Definindo distância dos elementos para borda*/
 }
 
+
 /*Configurações da class todo todoTitulo*/
 .todoTitulo {
     text-align: center; /*Alinhando texto ao centro*/
@@ -59,15 +60,17 @@ body {
 }
 /*Configurações da class itensDaLista*/
 .itensDaLista{
+    max-width: 760px;
     border: 1px solid #00000062;
     line-height: 35px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    margin: auto;
 }
 /*Configurações da class listaDeChecagem*/
-.listadeChecagem .check{
+.listaDeChecagem .check{
     width: 18px;
     height: 18px;
     font-size: 12px;
@@ -87,16 +90,16 @@ body {
     -ms-user-select: none;/*Edge*/
 }
 
-.listadeChecagem .check{
+.listaDeChecagem .check{
     color: #CCC;
     background-color: #CCC;
 }
-.listadeChecagem .input {
+.listaDeChecagem .input {
     display: none;
 }
 
 /*Configurações da class listaDeChecagem Checado*/
-.listadeChecagem .input:checked ~.check{
+.listaDeChecagem .input:checked ~.check{
     color: #FFF;
     background-color: #2196F3;
 }
