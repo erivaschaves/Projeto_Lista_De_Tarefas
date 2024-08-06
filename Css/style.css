@@ -38,7 +38,7 @@ body {
     text-align: center;
     cursor: pointer; /*Modifica o cursor do mouse para pointer*/
     font-size: 25px; /*Definndo tamanho da fonte*/
-    border-right: 1 px solid #00000062; /*criando borda a direita*/
+    border-right: 1px solid #00000062; /*criando borda a direita*/
 }
 
 /*Configurações da class todoIconeDeBusca quando passa o mouse*/
@@ -60,14 +60,12 @@ body {
 }
 /*Configurações da class itensDaLista*/
 .itensDaLista{
-    max-width: 760px;
-    border: 1px solid black;
+    border: 1px solid #00000070;
     line-height: 35px;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    
+    margin-bottom: 10px;  
 }
 /*Configurações da class listaDeChecagem*/
 .listaDeChecagem .check{
