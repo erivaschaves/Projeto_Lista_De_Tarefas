@@ -21,7 +21,7 @@ const inserirConteudo = (tarefa, value)=>{
 }
 //exibir tarefa
 const colocarTarefaNatela = () => {
-    const input = window.document.querySelector('todoInputDeBusca')
+    const input = window.document.querySelector('.todoInputDeBusca')
     //removendo espaços nas extremidades com a função trim()
     const value = input.value.trim()
     //caso o valor não seja vazio
@@ -29,7 +29,7 @@ const colocarTarefaNatela = () => {
         const tarefa = cloneDeModeloDeTarefa()
         inserirConteudo(tarefa, value)
         // criando um novo item e adicionando ao final com appendChild
-        window.document.querySelector('todaLista').appendChild(tarefa)
+        window.document.querySelector('.todaLista').appendChild(tarefa)
         input.value = ''
         adicionarTarefaFeita()
     }
@@ -37,7 +37,7 @@ const colocarTarefaNatela = () => {
 // Configurando tarefa concluída
 const tarefaFeita = (item) => {
     const input = item.querySelector('.input')
-    const text = item.querySelector('textoDaLista')
+    const text = item.querySelector('.textoDaLista')
     input.addEventListener('change', (event) => {
         // inserindo linha em tarefa concluída com operador ternário
         text.style.textDecoration = event.target.checked ? 'line-through' : 'none'})  
@@ -51,15 +51,22 @@ window.document.querySelector('.todoInputDeBusca').addEventListener('keyup', (ev
     if (event.code === 'Enter') colocarTarefaNatela()
 })
 
-window.document.querySelector('.todoIconeDeBusca').addEventListener ('click', colocarTarefaNatela())
+window.document.querySelector('.todoIconeDeBusca').addEventListener ('click', colocarTarefaNatela)
 
-/*
-function teste () {
+
+/*function teste () {
     window.document.querySelector('.demo').innerHTML = "Olá Mundo";
 }
 
 var elemento = window.document.querySelector('.todoIconeDeBusca');
 elemento.addEventListener('click',teste);*/
+
+
+
+
+
+
+
 
 
 
